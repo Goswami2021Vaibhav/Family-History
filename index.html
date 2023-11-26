@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Complete Family Details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cart-container {
+            height: 100vh;
+            padding: 20px 0;
+        }
+
+        .cart-container #tree {
+            height: 100%;
+        }
+
+        .collapse-all-btn {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            left: 0;
+            display: flex;
+            justify-content: end;
+            padding-right: 20px;
+            z-index: 1;
+        }
+
+        @media screen and (max-width:768px) {
+            .boc-toolbar-layout {
+                height: auto !important;
+            }
+
+            .cart-container {
+                height: 100vh;
+                padding: 20px 0;
+            }
+
+        }
+
+        .boc-edit-form-instruments {
+            min-height: 0px !important;
+        }
+
+        /* rectangular box color started */
+
+        [data-n-id='21'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='22'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='25'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='26'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='30'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='31'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='33'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='34'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='37'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='42'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='46'] rect {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='51'] rect {
+            fill: #ff4dff;
+        }
+
+
+        /* rectangular box color ended */
+
+
+        /* circular node color started */
+
+        [data-n-id='21'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='22'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='25'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='26'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='30'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='31'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='33'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='34'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='37'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='42'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='46'] circle {
+            fill: #ff4dff;
+        }
+
+        [data-n-id='51'] circle {
+            fill: #ff4dff;
+        }
+
+        /* circular node color ended */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="collapse-all-btn">
+                <button class="btn btn-warning" type="button" id="collapse-all">Collapse All</button>
+            </div>
+
+            <div class="col-12 py-3 cart-container">
+                <div id="tree"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js">
+    </script>
+    <script src="orgchart.js"></script>
+    <script src="data.js"></script>
+    <script>
+
+
+        document.getElementById("collapse-all").addEventListener("click", function () {
+            let id = 1
+            var node = chart.getNode(id);
+            var collapseIds = [];
+            iterate(chart, node, collapseIds, id);
+            chart.expandCollapse(id, [], collapseIds);
+            chart.center(1);
+        });
+
+        function iterate(c, n, collapseIds, id) {
+            if (id != n.id) {
+                collapseIds.push(n.id);
+            }
+
+            for (var i = 0; i < n.childrenIds.length; i++) {
+                iterate(c, c.getNode(n.childrenIds[i]), collapseIds, id)
+            }
+        }
+        // Picture ( चित्र )
+        var chart = new OrgChart(document.getElementById("tree"), {
+            template: "diva",
+            enableSearch: true,
+            mouseScrool: OrgChart.action.none,
+            showXScroll: OrgChart.scroll.visible,
+            editForm: {
+                photoBinding: "Picture",
+                buttons: {
+                    edit: null,
+                    share: null,
+                    pdf: null,
+                    remove: null
+                },
+            },
+
+            collapse: {
+                level: 4,
+                allChildren: true
+            },
+            toolbar: {
+                zoom: true,
+                fit: true,
+                expandAll: true
+            },
+            mouseScrool: OrgChart.action.zoom,
+
+            nodeBinding: {
+                field_0: "Name ( नाम )",
+                field_1: "DOB ( जन्म की तारीख )",
+                field_2: "SO/DO ( पुत्र / पुत्री )",
+                img_0: "Picture"
+            },
+            nodes: family_data
+        });
+
+    </script>
+
+</body>
+
+</html>
