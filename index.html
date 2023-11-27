@@ -29,6 +29,14 @@
         .boc-edit-form-instruments {
             min-height: 0px !important;
         }
+        .boc-input>label.focused, .boc-input>label.hasval{
+             font-size: 15px;
+             color: #039be5;
+        }
+        .boc-dark h1,
+        .boc-light h1 {
+            font-size: 25px !important;
+        }
 
         /* rectangular box color started */
 
@@ -64,7 +72,7 @@
             fill: #ff4dff;
         }
 
-        [data-n-id='37'] rect {
+        [data-n-id='38'] rect {
             fill: #ff4dff;
         }
 
@@ -118,7 +126,7 @@
             fill: #ff4dff;
         }
 
-        [data-n-id='37'] circle {
+        [data-n-id='38'] circle {
             fill: #ff4dff;
         }
 
@@ -184,7 +192,7 @@
             mouseScrool: OrgChart.action.none,
             showXScroll: OrgChart.scroll.visible,
             editForm: {
-                photoBinding: "Picture",
+                titleBinding: "Generation ( पीढ़ी )", photoBinding: "Picture",
                 buttons: {
                     edit: null,
                     share: null,
@@ -194,7 +202,7 @@
             },
 
             collapse: {
-                level: 4,
+
                 allChildren: true
             },
             toolbar: {
