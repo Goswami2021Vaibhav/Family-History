@@ -676,7 +676,7 @@ const family_data = [
         "SO/DO ( पुत्र / पुत्री )": "Ram Naval ( राम नवल )",
         "Generation ( पीढ़ी )": "Sixth ( छठा )",
         Picture: "https://cdn.balkan.app/shared/empty-img-blue.svg",
-        "Other Name ( अन्य नाम )": "Mantu ( मंटू )",
+        "Other Name ( अन्य नाम )": "---",
         "Wife/Husband ( पत्नी / पति )": "Shivanand Bharti ( शिवानंद भारती )",
         "Qualification ( योग्यता / शिक्षा )": "Master of Arts ( कला के मास्टर )",
         "Occupation ( पेशा )": 'Housewife ( गृहिणी )',
