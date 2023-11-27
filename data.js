@@ -734,6 +734,22 @@ const family_data = [
     },
     {
         id: 47,
+        pid: 20,
+        "Name ( नाम )": "Sudha Giri ( सुधा गिरि )",
+        "DOB ( जन्म की तारीख )": "---",
+        "SO/DO ( पुत्र / पुत्री )": "Ram Kaval ( राम कवल )",
+        "Generation ( पीढ़ी )": "Sixth ( छठा )",
+        Picture: "https://cdn.balkan.app/shared/empty-img-blue.svg",
+        "Other Name ( अन्य नाम )": "---",
+        "Wife/Husband ( पत्नी / पति )": "---",
+        "Qualification ( योग्यता / शिक्षा )": "---",
+        "Occupation ( पेशा )": '---',
+        "No. Of Son ( पुत्र की संख्या )": '3',
+        "No. Of Daughter ( पुत्री की संख्या )": '0',
+
+    },
+    {
+        id: 48,
         pid: 23,
         "Name ( नाम )": "Kuldeep Giri ( कुलदीप गिरी )",
         "DOB ( जन्म की तारीख )": "---",
@@ -749,7 +765,7 @@ const family_data = [
 
     },
     {
-        id: 48,
+        id: 49,
         pid: 23,
         "Name ( नाम )": "Avinash Giri ( अविनाश गिरी )",
         "DOB ( जन्म की तारीख )": "---",
@@ -765,7 +781,7 @@ const family_data = [
 
     },
     {
-        id: 49,
+        id: 50,
         pid: 24,
         "Name ( नाम )": "Shashank Goswami ( शशांक गोस्वामी )",
         "DOB ( जन्म की तारीख )": "20-05-1998",
@@ -781,7 +797,7 @@ const family_data = [
 
     },
     {
-        id: 50,
+        id: 51,
         pid: 24,
         "Name ( नाम )": "Vaibhav Goswami ( वैभव गोस्वामी )",
         "DOB ( जन्म की तारीख )": "23-03-2000",
@@ -797,7 +813,7 @@ const family_data = [
 
     },
     {
-        id: 51,
+        id: 52,
         pid: 24,
         "Name ( नाम )": "Sneha Goswami ( स्नेहा गोस्वामी )",
         "DOB ( जन्म की तारीख )": "12-01-1996",
